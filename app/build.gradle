@@ -16,6 +16,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "SERVER_URL", "\"https://newsapi.org/\""
+        buildConfigField "String", "API_KEY", "\"793665545aa34c80bb97878599b9c30f\""
+
     }
     buildTypes {
         release {
