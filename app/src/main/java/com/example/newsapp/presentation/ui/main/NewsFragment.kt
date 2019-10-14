@@ -1,20 +1,16 @@
 package com.example.newsapp.presentation.ui.main
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.newsapp.R
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class NewsFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = NewsFragment()
-    }
-
-    private lateinit var viewModel: NewsViewModel
+    private val viewModel: NewsViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,7 +21,6 @@ class NewsFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(NewsViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
