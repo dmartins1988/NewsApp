@@ -11,9 +11,7 @@ class NewsFragment : BaseFragment() {
     private lateinit var adapter : NewsAdapter
 
     companion object {
-        fun newInstance(): NewsFragment {
-            return NewsFragment()
-        }
+        fun newInstance() =  NewsFragment()
     }
 
     override fun getLayoutId(): Int = R.layout.main_fragment
