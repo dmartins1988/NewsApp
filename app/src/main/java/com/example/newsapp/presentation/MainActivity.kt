@@ -5,13 +5,17 @@ import android.os.Bundle
 import android.view.Menu
 import android.widget.SearchView
 import com.example.newsapp.R
+import com.example.newsapp.extensions.executeFragOperation
 import com.example.newsapp.presentation.ui.main.NewsFragment
+import com.example.newsapp.utils.FragOperations
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
+
+        executeFragOperation(NewsFragment.newInstance(), R.id.container, FragOperations.ADD)
 
         configureFragment()
     }

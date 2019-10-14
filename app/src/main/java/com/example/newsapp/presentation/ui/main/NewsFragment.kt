@@ -10,9 +10,13 @@ class NewsFragment : BaseFragment() {
     private val viewModel: NewsViewModel by viewModel()
     private lateinit var adapter : NewsAdapter
 
+    companion object {
+        fun newInstance(): NewsFragment {
+            return NewsFragment()
+        }
+    }
+
     override fun getLayoutId(): Int = R.layout.main_fragment
-
-
 
 
 }
