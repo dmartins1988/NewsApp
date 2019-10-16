@@ -14,22 +14,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
-
         executeFragOperation(NewsFragment.newInstance(), R.id.container, FragOperations.ADD)
-
-        configureFragment()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         return configureMenu(menu)
-    }
-
-    private fun configureFragment() {
-        var fragment = supportFragmentManager.findFragmentById(R.id.container) as NewsFragment?
-        if (fragment == null) {
-            fragment = NewsFragment()
-            supportFragmentManager.beginTransaction().add(R.id.container, fragment).commit()
-        }
     }
 
     private fun configureMenu(menu: Menu?) : Boolean {
