@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 
 fun View.gone() {
@@ -31,4 +32,16 @@ fun Fragment.hideKeyboard() {
     if (activity is AppCompatActivity) {
         activity.hideKeyboard()
     }
+}
+
+fun SearchView.onSearchQuerySubmit(action: (String) -> Unit) {
+    this.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+        override fun onQueryTextSubmit(query: String): Boolean {
+            action.invoke(query)
+            return true
+        }
+        override fun onQueryTextChange(newText: String): Boolean {
+            return true
+        }
+    })
 }

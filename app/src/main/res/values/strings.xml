@@ -3,4 +3,7 @@
     <string name="search">Search...</string>
     <string name="retry">Retry</string>
     <string name="oops_an_error_happened">Oops, an error occurred</string>
+    <string name="refresh">Refresh</string>
+    <string name="no_result_found">No results found</string>
+    <string name="technical_error">Oops, technical error</string>
 </resources>
