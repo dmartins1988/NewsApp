@@ -12,7 +12,6 @@ import com.example.newsapp.extensions.gone
 import com.example.newsapp.extensions.onSearchQuerySubmit
 import com.example.newsapp.extensions.visible
 import com.example.newsapp.presentation.base.BaseFragment
-import com.example.newsapp.presentation.ui.recyclerview.NewsAdapter
 import kotlinx.android.synthetic.main.news_fragment.*
 import org.koin.android.viewmodel.ext.android.viewModel
 

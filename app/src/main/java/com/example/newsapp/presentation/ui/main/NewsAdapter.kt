@@ -1,4 +1,4 @@
-package com.example.newsapp.presentation.ui.recyclerview
+package com.example.newsapp.presentation.ui.main
 
 import android.view.LayoutInflater
 import android.view.View
@@ -17,7 +17,9 @@ import kotlinx.android.synthetic.main.item_network_state.view.*
 import java.lang.IllegalArgumentException
 
 
-class NewsAdapter(private val callback: OnNewsClickListener) : PagedListAdapter<Article, RecyclerView.ViewHolder>(diffCallback) {
+class NewsAdapter(private val callback: OnNewsClickListener) : PagedListAdapter<Article, RecyclerView.ViewHolder>(
+    diffCallback
+) {
 
     interface OnNewsClickListener {
         fun onClickRetry()
@@ -29,8 +31,12 @@ class NewsAdapter(private val callback: OnNewsClickListener) : PagedListAdapter<
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(viewType, parent, false)
         return when(viewType) {
-            R.layout.item_article -> NewsViewsHolder(parent)
-            R.layout.item_network_state -> NetworkStateViewHolder(parent)
+            R.layout.item_article -> NewsViewsHolder(
+                parent
+            )
+            R.layout.item_network_state -> NetworkStateViewHolder(
+                parent
+            )
             else -> throw IllegalArgumentException("Unknown view type $viewType")
         }
     }
