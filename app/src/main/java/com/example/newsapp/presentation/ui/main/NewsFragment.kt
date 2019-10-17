@@ -104,6 +104,4 @@ class NewsFragment : BaseFragment(), NewsAdapter.OnNewsClickListener {
     private fun updateUIWhenEmptyList(size: Int, networkState: NetworkState?) {
         fragment_search_news_progress.visibility = if (size == 0 && networkState == NetworkState.LOADING)  View.VISIBLE else View.GONE
     }
-
-
 }
