@@ -8,6 +8,6 @@ class NewsRemoteDataStore(
 
     suspend fun getArticleByQuery(query: String,
                           page: Int,
-                          pageSize: Int) = newsService.getAllArticlesByQuery(query, page, pageSize)
+                          pageSize: Int) = newsService.getAllArticlesByQuery(query, page, pageSize).await()
 
 }

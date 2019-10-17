@@ -32,10 +32,10 @@ class NewsAdapter(private val callback: OnNewsClickListener) : PagedListAdapter<
         val view = LayoutInflater.from(parent.context).inflate(viewType, parent, false)
         return when(viewType) {
             R.layout.item_article -> NewsViewsHolder(
-                parent
+                view
             )
             R.layout.item_network_state -> NetworkStateViewHolder(
-                parent
+                view
             )
             else -> throw IllegalArgumentException("Unknown view type $viewType")
         }
