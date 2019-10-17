@@ -5,4 +5,4 @@ import com.example.newsapp.di.module.RemoteModule
 import com.example.newsapp.di.module.RepositoryModule
 import com.example.newsapp.di.module.ViewModelModule
 
-val AppComponent = listOf(NetworkModule, RemoteModule, RepositoryModule, ViewModelModule)
+val AppComponent = listOf(NetworkModule, ViewModelModule, RepositoryModule, RemoteModule)

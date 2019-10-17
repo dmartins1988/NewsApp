@@ -4,12 +4,10 @@ import androidx.lifecycle.*
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
 import com.example.newsapp.api.NetworkState
-import com.example.newsapp.model.Article
 import com.example.newsapp.presentation.pagination.NewsDataSourceFactory
 import com.example.newsapp.repository.NewsRepository
 
-class NewsViewModel(private val repository: NewsRepository,
-                    private val query: String) : ViewModel() {
+class NewsViewModel(repository: NewsRepository) : ViewModel() {
 
     private val newsDataSource = NewsDataSourceFactory(repository = repository, scope = viewModelScope)
 
